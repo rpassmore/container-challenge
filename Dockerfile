@@ -18,7 +18,7 @@ RUN CGO_ENABLED=0 go build -o /main
 FROM scratch
 
 WORKDIR /
-COPY static/ static
+
 COPY --from=build /main /main
 
 EXPOSE 3000
